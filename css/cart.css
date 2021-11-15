@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.cart-title {
+  padding-top: 80px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cart-container > p {
+  font-size: 24px;
+}
+
+.cart-left {
+  background-color: white;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 1px 10px -2px gray;
+}
+
+.cart-product {
+  display: flex;
+  border-bottom: 2px solid rgb(172, 172, 172);
+  width: 700px;
+  padding: 20px;
+}
+
+.cart-product:hover {
+  transition: all 0.8s ease;
+  border-bottom: 2px solid black;
+}
+
+.cart-img-container {
+  width: 120px;
+  height: 160px;
+}
+
+.cart-img-container > img {
+  width: inherit;
+  height: inherit;
+}
+
+.cart-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cart-details {
+  display: flex;
+  justify-content: center;
+  height: inherit;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.cart-del-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: gray;
+  border: 1px solid lightgray;
+  background-color: whitesmoke;
+  transition: 0.5s;
+}
+
+.cart-del-btn:hover {
+  background-color: lightgrey;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 30px;
+}
+
+.cart-right {
+  margin-left: 200px;
+}
+
+.cart-right-promo {
+  background-color: white;
+  width: 400px;
+  padding: 30px;
+  border-radius: 20px 20px 0 0;
+  border: 1px solid lightgray;
+  box-shadow: 0 1px 10px -2px gray;
+}
+
+.cart-right-promo > input {
+  height: 40px;
+  width: 380px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+  padding-left: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.cart-right-total {
+  margin-top: 3px;
+  background-color: white;
+  height: 300px;
+  width: 400px;
+  padding: 30px;
+  border-radius: 0 0 20px 20px;
+  border: 1px solid lightgray;
+  box-shadow: 0 1px 10px -2px gray;
+}
+
+.subtotal,
+.shipping,
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.checkout-btn > form > button {
+  height: 50px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.checkout-btn > form > button:hover {
+  background-color: rgb(94, 94, 94);
+}
+
+/* EDIT DORAYAKI */
+.edit-product {
+  display: flex;
+  border-bottom: 2px solid rgb(172, 172, 172);
+  width: 800px;
+  height: 250px;
+  padding: 20px;
+}
+
+.edit-product:hover {
+  transition: all 0.8s ease;
+  border-bottom: 2px solid black;
+}
+
+.edit-img-container {
+  width: 120px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.edit-img-container > img {
+  width: 140px;
+  height: 180px;
+}
+
+.edit-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.edit-details > form {
+  display: flex;
+  justify-content: center;
+  height: inherit;
+  margin-left: 50px;
+}
+
+.edit-details-left {
+  margin-right: 50px;
+}
+
+.edit-details-left > input,
+.edit-details-right > input {
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(172, 172, 172);
+  background-color: transparent;
+}
+
+.edit-details-left > input:focus,
+.edit-details-right > input:focus {
+  border-bottom: 2px solid black;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.8s ease;
+}
+
+#edit-deskripsi {
+  width: 300px;
+}
+
+.bottom-label {
+  margin-top: 20px;
+}
+
+.edit-check-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#edit-check-btn {
+  height: 50px;
+  width: 50px;
+  margin-left: 50px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 1px solid gray;
+}

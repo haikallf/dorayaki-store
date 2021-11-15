@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap");
+
+.product-details {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-left {
+  /* margin-left: 30px; */
+  padding-top: 30px;
+}
+
+.product-left > img {
+  width: 500px;
+  height: 790px;
+}
+
+.wishlist-icon:hover {
+  --d: 100%;
+  color: #fff;
+}
+
+.product-right {
+  height: 700px;
+  padding-left: 200px;
+  padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.product-right-info > input,
+.product-right-description > input {
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-bottom: 2px solid rgb(172, 172, 172);
+  width: 400px;
+  background-color: transparent;
+  outline: none;
+}
+
+.product-right-info > input:focus {
+  border-bottom: 2px solid black;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.8s ease;
+}
+
+#namaItem {
+  font-size: 36px;
+}
+
+.product-right-description {
+  margin-top: 50px;
+  width: 400px;
+}
+
+.product-right-quantity {
+  margin-top: 30px;
+}
+
+.product-right-quantity > form {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: -5px;
+}
+
+/* .product-right-quantity > form > input[type="number"],
+.product-right-quantity > form > input::-webkit-outer-spin-button,
+.product-right-quantity > form > input::-webkit-inner-spin-button {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid black;
+  background-color: inherit;
+  text-align: center;
+} */
+
+.product-right-quantity > form > button {
+  height: 40px;
+  width: 40px;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 5px;
+  background-color: whitesmoke;
+  transition: 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-right-quantity > form > button:hover {
+  background-color: rgb(221, 220, 220);
+}
+
+.product-right-description > h3 {
+  font-size: 32px;
+}
+
+.product-right-button-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.done-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* .done-btn > button {
+  margin-right: 30px;
+  height: 50px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: linear-gradient(#000 0 0) 0% calc(-3px - 100%) / var(--d, 0%) 200%
+    no-repeat;
+  transition: 0.3s, background-size 0.3s 0.3s;
+  cursor: pointer;
+}
+
+.done-btn > button:hover {
+  --d: 100%;
+  background-position: 50% 0%;
+  color: #fff;
+  transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
+} */
+
+.done-btn > button {
+  background: linear-gradient(white 80%, black 0) calc(0 * 100% / 3)
+      var(--d, 100%),
+    linear-gradient(black 80%, transparent 0) calc(0 * 100% / 3) var(--d, 100%),
+    linear-gradient(white 60%, black 0) calc(1 * 100% / 3) var(--d, 100%),
+    linear-gradient(black 60%, transparent 0) calc(1 * 100% / 3) var(--d, 100%),
+    linear-gradient(white 40%, black 0) calc(2 * 100% / 3) var(--d, 100%),
+    linear-gradient(black 40%, transparent 0) calc(2 * 100% / 3) var(--d, 100%),
+    linear-gradient(white 20%, black 0) calc(3 * 100% / 3) var(--d, 100%),
+    linear-gradient(black 20%, transparent 0) calc(3 * 100% / 3) var(--d, 100%);
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  background-size: calc(100% / 4) 500%;
+  background-repeat: no-repeat;
+  transition: 0.8s;
+  cursor: pointer;
+  margin-right: 30px;
+  height: 50px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.done-btn > button:hover {
+  --d: 0%;
+  color: white;
+}

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.order-history-title {
+  padding-top: 80px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
+
+.order-history-container {
+  display: flex;
+  justify-content: center;
+}
+
+.order-history-container > p {
+  font-size: 24px;
+}
+
+.order-history-left {
+  background-color: white;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 1px 10px -2px gray;
+}
+
+.order-history-details > form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-history-product {
+  display: flex;
+  border-bottom: 2px solid rgb(172, 172, 172);
+  width: 700px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.order-history-product:hover {
+  transition: all 0.8s ease;
+  border-bottom: 2px solid black;
+}
+
+.order-history-img-container {
+  width: 120px;
+  height: 160px;
+}
+
+.order-history-img-container > img {
+  width: inherit;
+  height: inherit;
+}
+
+.order-history-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.order-history-details {
+  display: flex;
+  justify-content: center;
+  height: inherit;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.order-history-del-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: gray;
+  border: 1px solid lightgray;
+  background-color: whitesmoke;
+  transition: 0.5s;
+}
+
+.order-history-del-btn:hover {
+  background-color: lightgrey;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 30px;
+}
+
+.order-history-right {
+  margin-left: 200px;
+}
+
+.order-history-right-promo {
+  background-color: white;
+  width: 400px;
+  padding: 30px;
+  border-radius: 20px 20px 0 0;
+  border: 1px solid lightgray;
+  box-shadow: 0 1px 10px -2px gray;
+}
+
+.order-history-right-promo > input {
+  height: 40px;
+  width: 380px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+  padding-left: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.order-history-right-total {
+  margin-top: 3px;
+  background-color: white;
+  height: 300px;
+  width: 400px;
+  padding: 30px;
+  border-radius: 0 0 20px 20px;
+  border: 1px solid lightgray;
+  box-shadow: 0 1px 10px -2px gray;
+}
+
+.subtotal,
+.shipping,
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.checkout-btn > button {
+  height: 50px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.checkout-btn > button:hover {
+  background-color: rgb(94, 94, 94);
+}

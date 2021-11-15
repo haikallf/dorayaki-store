@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("../images/login-background.jpg");
+}
+
+.login {
+  height: 800px;
+  width: 500px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 0 0px 13px 0px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login > h1 {
+  margin: 40px 0;
+  font-size: 36px;
+}
+
+.login > h1 > a {
+  text-decoration: none;
+  color: black;
+}
+
+.login > h2 {
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+/* .login-form {
+  background-color: aquamarine;
+} */
+
+.login-form > form > input[type="text"],
+.login-form > form > input[type="password"] {
+  width: 300px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-bottom: 2px solid lightgray;
+}
+
+.login-form > form > input[type="text"]:focus,
+.login-form > form > input[type="password"]:focus {
+  border-bottom: 2px solid black;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.8s ease;
+}
+
+.login-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.login-btn > input {
+  height: 50px;
+  width: 150px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 16px;
+  background: linear-gradient(#000 0 0) 50% calc(-3px - 100%) / var(--d, 0%)
+    200% no-repeat;
+  transition: 0.3s, background-size 0.3s 0.3s;
+  cursor: pointer;
+}
+
+.login-btn > input:hover {
+  --d: 100%;
+  background-position: 50% 0%;
+  color: #fff;
+  transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
+}
+
+.login-alt {
+  margin: 40px 0;
+}
+
+.login-alt-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apple-icon,
+.facebook-icon,
+.google-icon,
+.twitter-icon {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.apple-icon {
+  background-color: black;
+}
+
+.facebook-icon {
+  background-color: #3b5998;
+}
+
+.google-icon {
+  background-color: #eb4235;
+}
+
+.twitter-icon {
+  background-color: #1ca1f1;
+}
+
+.login > p {
+  margin-top: 80px;
+}
+
+.login > p > a {
+  color: #1ca1f1;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* SIGN UP PAGE */
+.signup {
+  height: 850px;
+  width: 500px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 0 0px 13px 0px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.signup > h1 {
+  margin: 40px 0;
+  font-size: 36px;
+}
+
+.signup > h1 > a {
+  text-decoration: none;
+  color: black;
+}
+
+.signup > h2 {
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.signup-form > form > input[type="text"],
+.signup-form > form > input[type="password"],
+.signup-form > form > input[type="email"] {
+  width: 300px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-bottom: 2px solid lightgray;
+}
+
+.signup-form > form > input[type="text"]:focus,
+.signup-form > form > input[type="password"]:focus,
+.signup-form > form > input[type="email"]:focus {
+  border-bottom: 2px solid black;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.8s ease;
+}
+
+.signup-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.signup-btn > input {
+  height: 50px;
+  width: 150px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 16px;
+  background: linear-gradient(#000 0 0) 50% calc(-3px - 100%) / var(--d, 0%)
+    200% no-repeat;
+  transition: 0.3s, background-size 0.3s 0.3s;
+  cursor: pointer;
+}
+
+.signup-btn > input:hover {
+  --d: 100%;
+  background-position: 50% 0%;
+  color: #fff;
+  transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
+}
+
+.signup > p {
+  margin-top: 30px;
+}
+
+.signup > p > a {
+  color: #1ca1f1;
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.addnew {
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top : 80px;
+    margin-right: 25%;
+    margin-left:25%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+  box-shadow: 0 0px 13px 0px rgba(0, 0, 0, 0.4);
+  padding-bottom: 30px;
+}
+
+
+.addnew > h2 {
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.add-form > form > input[type="text"] {
+width: 300px;
+outline: none;
+font-family: "Poppins", sans-serif;
+border: none;
+border-bottom: 2px solid lightgray;
+}
+
+.add-form > form > input[type="text"]:focus {
+border-bottom: 2px solid black;
+font-family: "Poppins", sans-serif;
+transition: all 0.8s ease;
+}
+
+.add-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.add-btn > input {
+height: 25px;
+width: 150px;
+outline: none;
+border: 1px solid black;
+border-radius: 20px;
+font-size: 16px;
+background: linear-gradient(#000 0 0) 50% calc(-3px - 100%) / var(--d, 0%)
+    200% no-repeat;
+transition: 0.3s, background-size 0.3s 0.3s;
+cursor: pointer;
+}
+
+.add-btn > input:hover {
+--d: 100%;
+background-position: 50% 0%;
+color: #fff;
+transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
+}
