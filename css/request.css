@@ -180,31 +180,37 @@ body {
 .edit-details-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
+}
+
+.edit-details {
+  display: flex;
+  justify-content: space-between;
 }
 
 .edit-details > form {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   height: inherit;
-  margin-left: 50px;
 }
 
-.edit-details-left {
-  margin-right: 50px;
+.edit-details-right {
+  align-items: center;
+  justify-content: center;
 }
 
-.edit-details-left > input,
 .edit-details-right > input {
   font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
   outline: none;
   border: none;
   border-bottom: 2px solid rgb(172, 172, 172);
   background-color: transparent;
 }
 
-.edit-details-left > input:focus,
 .edit-details-right > input:focus {
   border-bottom: 2px solid black;
   font-family: "Poppins", sans-serif;
@@ -226,10 +232,12 @@ body {
 }
 
 #edit-check-btn {
-  height: 50px;
-  width: 50px;
-  margin-left: 50px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
   border: 1px solid black;
+  margin-top: 40px;
   border-radius: 13px;
   background: linear-gradient(#000 0 0) 0% calc(-3px - 100%) / var(--d, 0%) 200%
     no-repeat;

@@ -153,14 +153,16 @@
                 <div class="edit-details-container">
                     <div class="edit-details">
                         <form method="POST">
-                            <p>Stok:</p>
-                            <input type="number" name="edit-stok" id="edit-stok" value=<?= $allItem[$i]["stok"]?> >
-                            
+                            <div class="edit-details-right">
+                                <p>Stok:</p>
+                                <input type="number" name="edit-stok" id="edit-stok" value=<?= $allItem[$i]["stok"]?> >
+                            </div>
+                                
                             <div class="edit-check-btn">
                                 <input type="hidden" name="edit-idItem" value=<?= $allItem[$i]["idItem"]?>>
                                 <button id="edit-check-btn" name="edit-check-btn" type="submit">request</i></button>
                             </div>
-                            
+
                         </form>
                     </div>
                     <!-- <form action="" method="POST">
@@ -174,41 +176,6 @@
             </div>
         <?php } ?>
         <?php } ?>
-        </div>
-
-
-        <?php if ($_SESSION['isAdmin'] != 1) {?>
-            <div class="cart-right">
-                <div class="cart-right-promo">
-                    <input type="text" placeholder="Masukkan kode promo">
-                </div>
-                <div class="cart-right-total">
-                    <h2>Ringkasan Belanja</h2>
-                    <div class="subtotal">
-                        <?php $subtotalArray = cartItemSubtotal($_SESSION['username']);?>
-                        <p>Subtotal (<?= $subtotalArray['totalItem'] ?> barang):</p>
-                        <p>Rp. <?= number_format($subtotalArray['subtotal']) ?></p>
-                    </div>
-                    <div class="shipping">
-                        <p>Ongkos Kirim:</p>
-                        <p>Rp0</p>
-                    </div>
-                    <div class="hr">
-                        <hr>
-                    </div>
-                    <div class="total">
-                        <p>Total:</p>
-                        <p>Rp. <?= number_format($subtotalArray['subtotal']) ?></p>
-                    </div>
-                    <div class="checkout-btn">
-                        <form method="POST">
-                            <button type="submit" name="buy-btn" id="buy-btn">Beli</button>
-                        </form>
-                        
-                    </div>
-                </div>
-            </div>
-            <?php } ?>    
         </div>
 
     <script src="../js/index.js"></script>

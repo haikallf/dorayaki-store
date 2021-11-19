@@ -78,7 +78,6 @@
              else if (array_key_exists('edit-check-btn', $_POST)){
                 editItem($_SESSION['username'], $_POST['edit-idItem'], "namaItem", $_POST["edit-namaItem"]);
                 editItem($_SESSION['username'], $_POST['edit-idItem'], "harga", $_POST["edit-harga"]);
-                editItem($_SESSION['username'], $_POST['edit-idItem'], "stok", $_POST["edit-stok"]);
                 editItem($_SESSION['username'], $_POST['edit-idItem'], "deskripsi", $_POST["edit-deskripsi"]);
              }
              else if (array_key_exists('del-from-cart-btn', $_POST)){
@@ -166,8 +165,6 @@
                             </div>
                             
                             <div class="edit-details-right">
-                                <p>Stok:</p>
-                                <input type="number" name="edit-stok" id="edit-stok" value=<?= $allItem[$i]["stok"]?> >
                                 <p class="bottom-label">Deskripsi:</p>
                                 <input type="text" name="edit-deskripsi" id="edit-deskripsi" value='<?= $allItem[$i]["deskripsi"]?>'>
                             </div>

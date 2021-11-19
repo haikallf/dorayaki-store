@@ -93,7 +93,6 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
-  background-color: aquamarine;
 }
 
 .add-to-cart > button {
@@ -155,6 +154,7 @@
 
 .edit-item > button {
   margin-left: 20px;
+  margin-right: 20px;
   height: 50px;
   width: 150px;
   border: 1px solid black;
