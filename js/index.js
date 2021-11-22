@@ -30,12 +30,12 @@ const goToOrderHistoryFromHome = () => {
   location.href = "./pages/order-history.php";
 };
 
-const goToAddVariant = () => {
-  location.href = "./addvariant.php";
+const goToRequest = () => {
+  location.href = "./request.php";
 };
 
-const goToAddVariantFromHome = () => {
-  location.href = "./pages/addvariant.php";
+const goToRequestFromHome = () => {
+  location.href = "./pages/request.php";
 };
 
 const submitData = (idx) => {
@@ -127,14 +127,15 @@ const renderHeader = (isAdmin, isHome) => {
   } else {
     if (isHome == 0) {
       headerIcon = `
+      
       <div class="header-history" onclick="goToOrderHistory()">
             <i class="fas fa-history"></i>
             <p>Order History</p>
         </div>
         <div class="vr"></div>
-        <div class="header-add-variant" onclick="goToAddVariant()">
+        <div class="header-add-variant" onclick="goToRequest()">
             <i class="fas fa-plus"></i>
-            <p>add variant</p>
+            <p>request dorayaki</p>
         </div>
         <div class="vr"></div>
       `;
@@ -145,9 +146,9 @@ const renderHeader = (isAdmin, isHome) => {
             <p>Order History</p>
         </div>
         <div class="vr"></div>
-        <div class="header-add-variant" onclick="goToAddVariantFromHome()">
+        <div class="header-add-variant" onclick="goToRequestFromHome()">
             <i class="fas fa-plus"></i>
-            <p>add variant</p>
+            <p>request dorayaki</p>
         </div>
         <div class="vr"></div>
       `;

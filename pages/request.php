@@ -153,6 +153,11 @@
                 <div class="edit-details-container">
                     <div class="edit-details">
                         <form method="POST">
+                        <div class="edit-details-left">
+                                <p>Nama Dorayaki:</p>
+                                <p><?= $allItem[$i]["namaItem"]?></p>
+                            </div>
+                            
                             <div class="edit-details-right">
                                 <p>Stok:</p>
                                 <input type="number" name="edit-stok" id="edit-stok" value=<?= $allItem[$i]["stok"]?> >

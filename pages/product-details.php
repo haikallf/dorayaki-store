@@ -196,12 +196,6 @@
                             </div>
                         </form>
 
-                        <form action="request.php" method="POST">
-                            <div class="request-item">
-                                <button type="submit" name="edit-item"><i class="fas fa-pen"></i> REQUEST DORAYAKI</button>
-                            </div>
-                        </form>
-
                     </div>
                 <?php } ?>
                 
