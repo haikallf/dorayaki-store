@@ -15,6 +15,11 @@
         $isAdmin = -1;
     }
     
+    require_once("./check/soap-checkreq.php");
+    if ($isAdmin == 1 && isset($_SESSION["username"])) {
+        SoapCheckRequest();
+    }
+
     $perPage = 10;
     $page = isset($_GET["halaman"]) ? (int)$_GET['halaman'] : 1;
     $start = ($page > 1) ? ($page * $perPage) - $perPage : 0;
