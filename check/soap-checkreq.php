@@ -24,12 +24,10 @@ function SoapCheckRequest() {
         return [];
     }
 
-function stokDariPabrik($arr) {
-    // {1,3},{2,4}
-    // tambah stok kalo id udah ada
-    // varian baru kalau id belom ada
+
+function updateStok($idItem) {
     $db = new SQLite3($GLOBALS['db']);
-    $query1 = $db->query("SELECT * FROM cart WHERE idItem = '$idItem';");
+    $query1 = $db->query("SELECT * FROM item WHERE idItem = $idItem;");
 
     $fetch1 = array();
     while ($row = $query1->fetchArray(SQLITE3_ASSOC)) {
@@ -37,15 +35,22 @@ function stokDariPabrik($arr) {
     }
 
     if (count($fetch1) == 0) {
-        $query2 = $db->query("INSERT INTO cart (username, idItem, quantity) VALUES ('$username', '$idItem', '$quantity');");
+        $query2 = $db->query("INSERT INTO item (idItem, quantity) VALUES ('$idItem', '$quantity');");
     }
     else {
-        $query3 = $db->query("UPDATE cart SET quantity = quantity + '$quantity' WHERE idItem = '$idItem';");
+        $query3 = $db->query("UPDATE item SET quantity = quantity + '$quantity' WHERE idItem = '$idItem';");
     }
     
     $db->close();
     unset($db);
     unset($fetch1);
     }
+}
+function stokDariPabrik($arr) {
+    // [{1,3},{2,4}]
+    // tambah stok kalo id udah ada
+    // varian baru kalau id belom ada
+    
+    
 }
 ?>
