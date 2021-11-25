@@ -23,5 +23,29 @@ function SoapCheckRequest() {
         echo $e->getMessage();
         return [];
     }
+
+function stokDariPabrik($arr) {
+    // {1,3},{2,4}
+    // tambah stok kalo id udah ada
+    // varian baru kalau id belom ada
+    $db = new SQLite3($GLOBALS['db']);
+    $query1 = $db->query("SELECT * FROM cart WHERE idItem = '$idItem';");
+
+    $fetch1 = array();
+    while ($row = $query1->fetchArray(SQLITE3_ASSOC)) {
+        array_push($fetch1, $row);
+    }
+
+    if (count($fetch1) == 0) {
+        $query2 = $db->query("INSERT INTO cart (username, idItem, quantity) VALUES ('$username', '$idItem', '$quantity');");
+    }
+    else {
+        $query3 = $db->query("UPDATE cart SET quantity = quantity + '$quantity' WHERE idItem = '$idItem';");
+    }
+    
+    $db->close();
+    unset($db);
+    unset($fetch1);
+    }
 }
 ?>
