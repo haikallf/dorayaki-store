@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require_once("../check/soap-list.php");
     if (!isset($_SESSION['username'])) {
 
         echo "<script>location.href='login.php'</script>";
@@ -144,6 +143,7 @@
         <?php } else {?>
         <?php
             require_once( '../check/database.php' );
+            require_once("../check/soap-list.php");
             $allItem = $soaplistdorayaki;
         ?>
         <?php for($i = 0; $i < count($allItem); $i++) {?>

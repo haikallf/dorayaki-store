@@ -8,31 +8,36 @@ if (!isset($_SESSION['username'])) {
 
 }
 
-try {
-    $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
-    socket_connect($sock, "8.8.8.8", 53);
-    socket_getsockname($sock, $name);
-    // local machine's external IP address
-    $localAddr = strval($name);
+function SoapRequest($idItem, $quantity) {
 
-    $id = 1;
-    $qty = 2;
+    if (isset($_SESSION['username'])) {
 
-    $soapclient = new SoapClient('http://localhost:8081/ws/req?wsdl');
-    $param = new stdClass();
-    $param->arg0 = $localAddr;
-    $param->arg1 = $_SESSION['username'];
-    $param->arg2 = $id;
-    $param->arg3 = $qty;
-    $response = $soapclient->RequestDorayakiPabrik($param);
+        try {
+            $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
+            socket_connect($sock, "8.8.8.8", 53);
+            socket_getsockname($sock, $name);
+            // local machine's external IP address
+            $localAddr = strval($name);
+    
+        
+            $soapclient = new SoapClient('http://localhost:8081/ws/req?wsdl');
+            $param = new stdClass();
+            $param->arg0 = $localAddr;
+            $param->arg1 = $_SESSION['username'];
+            $param->arg2 = $idItem;
+            $param->arg3 = $quantity;
+            $response = $soapclient->RequestDorayakiPabrik($param);
+        
+            $soapreqdorayaki = json_decode(json_encode($response), true);
+            var_dump($soapreqdorayaki);
+            var_dump($soapreqdorayaki["return"]);
+           
+        
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 
-    $soapreqdorayaki = json_decode(json_encode($response), true);
-    var_dump($soapreqdorayaki);
-    var_dump($soapreqdorayaki["return"]);
-   
-
-} catch (Exception $e) {
-    echo $e->getMessage();
 }
 
 ?>
