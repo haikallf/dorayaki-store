@@ -25,9 +25,9 @@ function SoapCheckRequest() {
     }
 
 
-function updateStok($idItem) {
+function updateStok($idItem, $quantity) {
     $db = new SQLite3($GLOBALS['db']);
-    $query1 = $db->query("SELECT * FROM item WHERE idItem = $idItem;");
+    $query1 = $db->query("SELECT * FROM item WHERE idItem = '$idItem';");
 
     $fetch1 = array();
     while ($row = $query1->fetchArray(SQLITE3_ASSOC)) {
@@ -46,10 +46,19 @@ function updateStok($idItem) {
     unset($fetch1);
     }
 }
+
 function stokDariPabrik($arr) {
-    // [{1,3},{2,4}]
-    // tambah stok kalo id udah ada
-    // varian baru kalau id belom ada
+    // array(0) { }
+    // array(2) { [0]=> array(1) { [1]=> string(2) "15" } [1]=> array(1) { [7]=> string(1) "2" } }
+    if (count($arr) == 0){
+        return;
+    }
+    else {
+        for ($i = 0; $i < count($arr); $i++){
+            updateStok($arr[$i]["idItem"], $arr[$i]["quantity"] );
+        }
+    }
+
     
     
 }
