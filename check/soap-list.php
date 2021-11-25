@@ -6,17 +6,14 @@ try {
     socket_getsockname($sock, $name);
     // local machine's external IP address
     $localAddr = strval($name);
-    var_dump($localAddr);
-
     $soapclient = new SoapClient('http://localhost:8081/ws/list?wsdl');
     $param = new stdClass();
     $param->arg0 = $localAddr;
     $response = $soapclient->ListDorayakiPabrik($param);
 
     // pake list ini buat list di halaman request dorayaki
-    $soaplist = json_decode(json_encode($response), true);
-    var_dump($soaplist);
-    
+    $soaplistdorayaki = json_decode(json_encode($response), true);
+    $soaplistdorayaki = json_decode($soaplistdorayaki["return"], true);
 
 } catch (Exception $e) {
     echo $e->getMessage();

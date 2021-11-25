@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once("../check/soap-list.php");
     if (!isset($_SESSION['username'])) {
 
         echo "<script>location.href='login.php'</script>";
@@ -143,28 +144,24 @@
         <?php } else {?>
         <?php
             require_once( '../check/database.php' );
-            $allItem = loadAllItem($_SESSION['username']);
+            $allItem = $soaplistdorayaki;
         ?>
         <?php for($i = 0; $i < count($allItem); $i++) {?>
             <div class="edit-product">
-                <div class="edit-img-container">
-                    <img src=<?= ".".$allItem[$i]["gambar"]?> alt="foto dorayaki" />
-                </div>
                 <div class="edit-details-container">
                     <div class="edit-details">
                         <form method="POST">
                         <div class="edit-details-left">
-                                <p>Nama Dorayaki:</p>
-                                <p><?= $allItem[$i]["namaItem"]?></p>
+                                <p><?= $allItem[$i]["nama"]?></p>
                             </div>
                             
                             <div class="edit-details-right">
-                                <p>Stok:</p>
-                                <input type="number" name="edit-stok" id="edit-stok" value=<?= $allItem[$i]["stok"]?> >
+                                <p>Jumlah :</p>
+                                <input type="number" name="jumlah-request" id="edit-stok"  />
                             </div>
                                 
                             <div class="edit-check-btn">
-                                <input type="hidden" name="edit-idItem" value=<?= $allItem[$i]["idItem"]?>>
+                                <input type="hidden" name="edit-idItem" value=<?= $allItem[$i]["idItem"]?> />
                                 <button id="edit-check-btn" name="edit-check-btn" type="submit">request</i></button>
                             </div>
 
