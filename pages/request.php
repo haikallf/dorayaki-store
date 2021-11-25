@@ -55,6 +55,7 @@
         <?php 
             
             require_once( '../check/database.php' );
+            require_once("../check/soap-req.php");
             if(array_key_exists('logout-btn', $_POST)) {
                 if (isset($_SESSION['username'])) {
                     $_SESSION = [];
@@ -76,7 +77,7 @@
                 buyItemFromCart($_SESSION['username'], date("Y-m-d h:i:sa", strtotime("now")));
              }
              else if (array_key_exists('edit-check-btn', $_POST)){
-                editItem($_SESSION['username'], $_POST['edit-idItem'], "stok", $_POST["edit-stok"]);
+                SoapRequest($_SESSION['username'], $_POST['edit-idItem'], $_POST["jumlah-request"]);
              }
              else if (array_key_exists('del-from-cart-btn', $_POST)){
                  delFromCart($_SESSION['username'], $_POST['del-cart-idItem']);
@@ -144,7 +145,7 @@
         <?php
             require_once( '../check/database.php' );
             require_once("../check/soap-list.php");
-            $allItem = $soaplistdorayaki;
+            $allItem = SoapList();
         ?>
         <?php for($i = 0; $i < count($allItem); $i++) {?>
             <div class="edit-product">
@@ -157,7 +158,7 @@
                             
                             <div class="edit-details-right">
                                 <p>Jumlah :</p>
-                                <input type="number" name="jumlah-request" id="edit-stok"  />
+                                <input type="number" name="jumlah-request" id="edit-stok" required/>
                             </div>
                                 
                             <div class="edit-check-btn">
