@@ -163,7 +163,7 @@
                                 
                             <div class="edit-check-btn">
                                 <input type="hidden" name="edit-idItem" value=<?= $allItem[$i]["idItem"]?> key=<?= $allItem[$i]["idItem"]?> />
-                                <button id="edit-check-btn" name="edit-check-btn" onclick="location.href='../index.php';" type="submit">request</i></button>
+                                <button id="edit-check-btn" name="edit-check-btn" type="submit">request</i></button>
                             </div>
 
                         </form>
@@ -180,24 +180,12 @@
         <?php } ?>
         <?php } ?>
         </div>
-        <?php require_once("../check/soap-checkreq.php"); 
-            $arr = SoapCheckRequest();
-            stokDariPabrik($arr);
-        ?>
+        
     <script src="../js/index.js"></script>
     <script>
-        // const selectElement = document.querySelector('.edit-stok');
-
-        // selectElement.addEventListener('change', (event) => {
-        // const result = document.querySelector('.result');
-        // result.textContent = `You like ${event.target.value}`;
-        // });
-
-        // const stok = document.getElementById('edit-stok');
-        // const inputHandler = function(e) {
-        //     console.log(e.target.value);
-        // }
-        // stok.addEventListener('change', inputHandler);
+        const toHome = () => {
+            location.href = "../index.php";
+        };
 
     </script>
 </body>

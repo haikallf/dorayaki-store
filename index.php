@@ -14,8 +14,13 @@
     } else {
         $isAdmin = -1;
     }
-
-
+    
+    require_once("./check/soap-checkreq.php"); 
+    if ($isAdmin == 1) {
+        $arr = SoapCheckRequest();
+        stokDariPabrik($arr);
+    }
+    
     $perPage = 10;
     $page = isset($_GET["halaman"]) ? (int)$_GET['halaman'] : 1;
     $start = ($page > 1) ? ($page * $perPage) - $perPage : 0;
@@ -132,9 +137,7 @@
             <?php } ?>
         </div>
     </div>
-    <?php 
-    ?>
-
+   
     <!-- <div class="container" id="container"></div> -->
     <script src="./js/index.js"></script>
   </body>

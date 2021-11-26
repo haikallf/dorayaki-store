@@ -29,7 +29,7 @@ function SoapCheckRequest() {
 
     
 function updateStok($idItem, $nama, $stok) {
-    $path = "../db/database.db";
+    $path = "./db/database.db";
     $db = new SQLite3($path);
     $query1 = $db->query("SELECT * FROM item WHERE idItem = '$idItem';");
 
