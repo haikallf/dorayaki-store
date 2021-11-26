@@ -27,6 +27,4 @@ function SoapRequest($username, $idItem, $quantity) {
     }
 
 }
-
-SoapRequest("admin", 1, 1);
 ?>

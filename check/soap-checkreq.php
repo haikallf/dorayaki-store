@@ -19,17 +19,19 @@ function SoapCheckRequest() {
         // pake list ini buat list di halaman request dorayaki
         $soapcheckdorayaki = json_decode(json_encode($response), true);
         $soapcheckdorayaki = json_decode($soapcheckdorayaki["return"], true);
-    
+        print_r($soapcheckdorayaki);
         return $soapcheckdorayaki;
 
     } catch (Exception $e) {
         echo $e->getMessage();
         return [];
     }
+}
 
-
-function updateStok($idItem, $quantity) {
-    $db = new SQLite3($GLOBALS['db']);
+    
+function updateStok($idItem, $nama, $stok) {
+    $path = "../db/database.db";
+    $db = new SQLite3($path);
     $query1 = $db->query("SELECT * FROM item WHERE idItem = '$idItem';");
 
     $fetch1 = array();
@@ -38,27 +40,28 @@ function updateStok($idItem, $quantity) {
     }
 
     if (count($fetch1) == 0) {
-        $query2 = $db->query("INSERT INTO item (idItem, quantity) VALUES ('$idItem', '$quantity');");
+        $query2 = $db->query("INSERT INTO item (idItem, namaItem, deskripsi, harga, stok, gambar, available) VALUES ('$idItem', '$nama', '-', 0, '$stok', '-', 0);");
     }
     else {
-        $query3 = $db->query("UPDATE item SET quantity = quantity + '$quantity' WHERE idItem = '$idItem';");
+        $query3 = $db->query("UPDATE item SET stok = stok + '$stok' WHERE idItem = '$idItem';");
     }
     
     $db->close();
     unset($db);
     unset($fetch1);
     }
-}
+
 
 function stokDariPabrik($arr) {
     // array(0) { }
     // array(2) { [0]=> array(1) { [1]=> string(2) "15" } [1]=> array(1) { [7]=> string(1) "2" } }
-    if (!isset($arr) || empty($arr) || $arr == null || $arr = []){
+    if (!isset($arr) || empty($arr) || $arr == null || count($arr) == 0){
         return;
     }
     else {
+        echo "ID ITEMM";
         for ($i = 0; $i < count($arr); $i++){
-            updateStok($arr[$i]["idItem"], $arr[$i]["quantity"] );
+            updateStok(intval($arr[$i]["idItem"]), $arr[$i]["nama"], intval($arr[$i]["quantity"]) );
         }
     }
     

@@ -6,9 +6,6 @@
     }
 ?>
 
-<?php require_once("../check/soap-checkreq.php"); 
-            stokDariPabrik(SoapCheckRequest());
-        ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,7 +163,7 @@
                                 
                             <div class="edit-check-btn">
                                 <input type="hidden" name="edit-idItem" value=<?= $allItem[$i]["idItem"]?> key=<?= $allItem[$i]["idItem"]?> />
-                                <button id="edit-check-btn" name="edit-check-btn"  type="submit">request</i></button>
+                                <button id="edit-check-btn" name="edit-check-btn" onclick="location.href='../index.php';" type="submit">request</i></button>
                             </div>
 
                         </form>
@@ -183,7 +180,10 @@
         <?php } ?>
         <?php } ?>
         </div>
-
+        <?php require_once("../check/soap-checkreq.php"); 
+            $arr = SoapCheckRequest();
+            stokDariPabrik($arr);
+        ?>
     <script src="../js/index.js"></script>
     <script>
         // const selectElement = document.querySelector('.edit-stok');

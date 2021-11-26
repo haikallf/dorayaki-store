@@ -23,6 +23,5 @@ function SoapList() {
         return [];
     }
 }
-SoapList();
 
 ?>
