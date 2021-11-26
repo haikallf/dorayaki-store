@@ -21,8 +21,10 @@ Doradora merupakan sebuah web e-commerce yang bergerak dalam penjualan berbagai 
 3. Install SQlite
 4. Install DB Browser
 5. Pastikan Sqlite3 sudah diaktifkan pada php.ini. Caranya buka php.ini, lalu hapus ";" pada extension=sqlite3 
-6. Lakukan clone dari repository program dengan git clone
-7. Jalankan server
+6. Pastikan socket sudah diaktifkan pada php.ini. Caranya buka php.ini, lalu hapus ";" pada extension=socket
+6. Pastikan soap sudah diaktifkan pada php.ini. Caranya buka php.ini, lalu hapus ";" pada extension=soap
+7. Lakukan clone dari repository program dengan git clone
+8. Jalankan server
 
 ## Cara menjalankan server
 1. Buka terminal.
@@ -54,12 +56,17 @@ product detail user
 ![detailuser](./SS/detailNon.jpg)
 4. Order history
 ![hist](./SS/orderhistory.jpg)
-5. Add variant
-![addvar](./SS/addnewvariant.jpg)
-6. shoping cart
+5. shoping cart
 ![cart](./SS/keranjang.jpg)
-7. pencarian
+6. pencarian
 ![cari](./SS/Pencarian.png)
+7. Request
+![req](./SS/request.png)
+
+
+## perubahan
+1. Tidak ada add variant
+2. Update stock dilakukan melalui request
 
 ## Pembagian tugas 
 Server-side
