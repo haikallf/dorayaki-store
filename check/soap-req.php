@@ -20,7 +20,11 @@ function SoapRequest($username, $idItem, $quantity) {
         $response = $soapclient->RequestDorayakiPabrik($param);
     
         $soapreqdorayaki = json_decode(json_encode($response), true);
-        
+        $soapreqdorayaki = $soapreqdorayaki["return"];
+
+        echo '<script language="javascript">';
+        echo 'alert("'.$soapreqdorayaki.'")';
+        echo '</script>';
     
     } catch (Exception $e) {
         echo $e->getMessage();
