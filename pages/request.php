@@ -6,6 +6,9 @@
     }
 ?>
 
+<?php require_once("../check/soap-checkreq.php"); 
+            stokDariPabrik(SoapCheckRequest());
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,12 +161,12 @@
                             
                             <div class="edit-details-right">
                                 <p>Jumlah :</p>
-                                <input type="number" name="jumlah-request" id="edit-stok" required/>
+                                <input type="number" name="jumlah-request" id="edit-stok" required min="1"/>
                             </div>
                                 
                             <div class="edit-check-btn">
-                                <input type="hidden" name="edit-idItem" value=<?= $allItem[$i]["idItem"]?> />
-                                <button id="edit-check-btn" name="edit-check-btn" type="submit">request</i></button>
+                                <input type="hidden" name="edit-idItem" value=<?= $allItem[$i]["idItem"]?> key=<?= $allItem[$i]["idItem"]?> />
+                                <button id="edit-check-btn" name="edit-check-btn"  type="submit">request</i></button>
                             </div>
 
                         </form>
