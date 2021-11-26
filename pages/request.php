@@ -145,9 +145,7 @@
         <?php
             require_once( '../check/database.php' );
             require_once("../check/soap-list.php");
-            require_once("../check/soap-checkreq.php");
             $allItem = SoapList();
-
         ?>
         <?php for($i = 0; $i < count($allItem); $i++) {?>
             <div class="edit-product">
@@ -181,6 +179,9 @@
             </div>
         <?php } ?>
         <?php } ?>
+        <?php require_once("../check/soap-checkreq"); 
+            stokDariPabrik(SoapCheckRequest());
+        ?>
         </div>
 
     <script src="../js/index.js"></script>

@@ -110,9 +110,6 @@
                 
                 ?>
                 <div class="pagination">
-                    <?php 
-                        
-                    ?>
                      <?php for($i = 1; $i <= $pages; $i++) {?>
                         <form method="GET">
                             <input type="hidden" name="halaman" value=<?= $i ?>>
@@ -135,6 +132,8 @@
             <?php } ?>
         </div>
     </div>
+    <?php 
+    ?>
 
     <!-- <div class="container" id="container"></div> -->
     <script src="./js/index.js"></script>

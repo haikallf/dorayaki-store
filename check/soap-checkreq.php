@@ -1,5 +1,8 @@
 <?php 
-session_start();
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 
 function SoapCheckRequest() {
     try {
@@ -15,7 +18,9 @@ function SoapCheckRequest() {
     
         // pake list ini buat list di halaman request dorayaki
         $soapcheckdorayaki = json_decode(json_encode($response), true);
+        var_dump($soapcheckdorayaki);
         $soapcheckdorayaki = json_decode($soapcheckdorayaki["return"], true);
+        var_dump($soapcheckdorayaki);
     
         return $soapcheckdorayaki;
 
@@ -50,16 +55,16 @@ function updateStok($idItem, $quantity) {
 function stokDariPabrik($arr) {
     // array(0) { }
     // array(2) { [0]=> array(1) { [1]=> string(2) "15" } [1]=> array(1) { [7]=> string(1) "2" } }
-    if (count($arr) == 0){
+    if (!isset($arr) || empty($arr) || $arr == null || $arr = []){
         return;
     }
     else {
         for ($i = 0; $i < count($arr); $i++){
+            var_dump($arr);
+            var_dump($arr[$i]["idItem"]);
             updateStok($arr[$i]["idItem"], $arr[$i]["quantity"] );
         }
     }
-
-    
     
 }
 ?>

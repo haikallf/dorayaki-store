@@ -14,7 +14,6 @@ function SoapList() {
     
         // pake list ini buat list di halaman request dorayaki
         $soaplistdorayaki = json_decode(json_encode($response), true);
-        var_dump($soaplistdorayaki);
         $soaplistdorayaki = json_decode($soaplistdorayaki["return"], true);
         
         return $soaplistdorayaki;
