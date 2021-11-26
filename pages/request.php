@@ -179,9 +179,6 @@
             </div>
         <?php } ?>
         <?php } ?>
-        <?php require_once("../check/soap-checkreq"); 
-            stokDariPabrik(SoapCheckRequest());
-        ?>
         </div>
 
     <script src="../js/index.js"></script>
