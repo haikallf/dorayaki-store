@@ -18,9 +18,7 @@ function SoapCheckRequest() {
     
         // pake list ini buat list di halaman request dorayaki
         $soapcheckdorayaki = json_decode(json_encode($response), true);
-        var_dump($soapcheckdorayaki);
         $soapcheckdorayaki = json_decode($soapcheckdorayaki["return"], true);
-        var_dump($soapcheckdorayaki);
     
         return $soapcheckdorayaki;
 
@@ -60,8 +58,6 @@ function stokDariPabrik($arr) {
     }
     else {
         for ($i = 0; $i < count($arr); $i++){
-            var_dump($arr);
-            var_dump($arr[$i]["idItem"]);
             updateStok($arr[$i]["idItem"], $arr[$i]["quantity"] );
         }
     }
